@@ -25,7 +25,10 @@ var game = new Phaser.Game(600, 600, Phaser.AUTO, gameCanvas,{ preload: preload,
 	 * All of the assets (images, sounds, etc.), should be loaded here.
 	 */                        
 function preload() {
-    // load all game assets here
+    game.load.image('sky', 'assets/sky.png');
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('star', 'assets/star.png');
+    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 
 } 
 
@@ -36,7 +39,7 @@ function preload() {
 	 * should be rendered out here.
 	 */
 function create() {
-  // create the game world here
+    game.add.sprite(0, 0, 'star');
     
 }
   
